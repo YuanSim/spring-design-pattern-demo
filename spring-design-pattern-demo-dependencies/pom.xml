@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring-design-pattern-demo</artifactId>
+        <groupId>yuan-sim</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <packaging>pom</packaging>
+    <artifactId>spring-design-pattern-demo-dependencies</artifactId>
+
+    <developers>
+        <developer>
+            <name>design-pattern</name>
+            <email>17730088312@163.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/。。。</url>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+    </dependencies>
+</project>
