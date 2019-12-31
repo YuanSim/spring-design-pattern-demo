@@ -12,7 +12,7 @@
 
 查看 [TODO](./TODO.md) 文件
 
-`spring design pattern demo` 是一个用来深度学习与实战 `设计模式` 的项目
+`spring design pattern demo` 是一个用来深度学习与实战 `设计模式 + spring容器` 的项目
 
 ## 开发环境
 
