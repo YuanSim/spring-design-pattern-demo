@@ -24,6 +24,10 @@
 
 | Module 名称                                                  | Module 介绍                                                    |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [sim-framework-template-demo](./sim-framework-template-demo) | 架构模块                                                       |
+| [sim-framework-template-config](./sim-framework-template-demo/sim-framework-template-config)| 架构配置模块                      |                                            |
+| [sim-framework-template-core](./sim-framework-template-demo/sim-framework-template-core)|  架构核心类管理                        |
+| [sim-framework-template-Interceptor](./sim-framework-template-demo/sim-framework-template-Interceptor)| 统一拦截管理           |
 | [spring-design-pattern-demo-dependencies](./spring-design-pattern-demo-dependencies)|   包管理                               |
 | [spring-strategy-pattern-demo](./spring-strategy-pattern-demo)|   策略模式pom                                                 |
 | [spring-strategy-pattern-normal](./spring-strategy-pattern-normal)|   策略模式普通实现                                          |
