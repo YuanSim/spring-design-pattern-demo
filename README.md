@@ -7,7 +7,10 @@
 </p>
 
 
+
 ## 项目简介
+
+查看 [TODO](./TODO.md) 文件
 
 `spring design pattern demo` 是一个用来深度学习与实战 `设计模式` 的项目
 
@@ -19,5 +22,9 @@
 
 ## 模块介绍
 
-| 
-### spring-strategy-pattern-demo 策略模式
+| Module 名称                                                  | Module 介绍                                                    |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [spring-design-pattern-demo-dependencies](./spring-design-pattern-demo-dependencies)|   包管理                               |
+| [spring-strategy-pattern-demo](./spring-strategy-pattern-demo)|   策略模式pom                                                 |
+| [spring-strategy-pattern-normal](./spring-strategy-pattern-normal)|   策略模式普通实现                                          |
+| [spring-responsibility-chain-demo](./spring-responsibility-chain-demo)|   责任链模式                                           |
