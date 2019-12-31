@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-strategy-pattern-normal</module>
+        <module>spring-strategy-pattern-utils</module>
     </modules>
 
 
