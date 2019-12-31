@@ -12,6 +12,7 @@
         <module>spring-strategy-pattern-demo</module>
         <module>spring-responsibility-chain-demo</module>
         <module>spring-template-method-pattern-demo</module>
+        <module>sim-framework-template-demo</module>
     </modules>
     <packaging>pom</packaging>
 

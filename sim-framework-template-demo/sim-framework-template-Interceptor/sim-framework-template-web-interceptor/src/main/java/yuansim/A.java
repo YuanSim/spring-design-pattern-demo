@@ -1,4 +1,4 @@
-package yuansim.payment.constants;
+package yuansim;
 
 /**
  * @QQ交流群: 648741281
@@ -7,9 +7,5 @@ package yuansim.payment.constants;
  * @Author: Simon.Mr
  * @Created 2019/12/31
  */
-public enum  PayType {
-
-    ali_pay,
-    wx_pay,
-    union_pay;
+public class A {
 }

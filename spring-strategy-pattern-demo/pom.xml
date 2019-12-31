@@ -17,17 +17,16 @@
         <module>spring-strategy-pattern-db</module>
     </modules>
 
-
     <properties>
-        <spring.design.pattern.demo.dependencies.version>1.0-SNAPSHOT</spring.design.pattern.demo.dependencies.version>
+        <spring.design.pattern.demo.dependencies>1.0-SNAPSHOT</spring.design.pattern.demo.dependencies>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>yuan-sim</groupId>
             <artifactId>spring-design-pattern-demo-dependencies</artifactId>
-            <version>${spring.design.pattern.demo.dependencies.version}</version>
+            <version>${spring.design.pattern.demo.dependencies}</version>
         </dependency>
     </dependencies>
+
 
 </project>
