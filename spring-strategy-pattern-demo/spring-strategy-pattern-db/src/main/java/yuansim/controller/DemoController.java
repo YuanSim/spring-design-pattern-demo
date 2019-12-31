@@ -36,6 +36,9 @@ public class DemoController extends BaseRestController {
             throw new ViewParamException();
         }
 
+        /**
+         * 从数据库获取beanId
+         */
         PaymentChannel paymentChannel = paymentChannelMapper.getPaymentChannel(code);
 
         if(null == paymentChannel) {
@@ -49,6 +52,9 @@ public class DemoController extends BaseRestController {
             throw new DataException("beanId不存在");
         }
 
+        /**
+         * 使用spring容器通过的工具从容器中获取bean
+         */
         Pay pay = SpringUtils.getBean(strategyBeanId, Pay.class);
 
         String call = pay.call();
