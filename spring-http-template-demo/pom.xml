@@ -12,6 +12,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-restful-template-demo</module>
+        <module>spring-unified-exception-template-demo</module>
     </modules>
 
     <properties>

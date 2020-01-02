@@ -6,10 +6,12 @@ import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 import yuansim.view.entity.CommonResult;
+import yuansim.view.exception.BusinessException;
 
 /**
  * @QQ交流群: 648741281
@@ -22,6 +24,22 @@ import yuansim.view.entity.CommonResult;
 @Configuration
 public class UnifiedReturnConfig {
 
+    /**
+     * 统一 异常配置
+     */
+    @RestControllerAdvice
+    static class UnifiedExceptionHandler{
+
+        @ExceptionHandler(BusinessException.class)
+        public CommonResult<Void> handleBusinessException(BusinessException be){
+            return CommonResult.errorResult(be.getErrorCode(), be.getErrorMsg());
+        }
+    }
+
+
+    /**
+     * 返回值 responseBody 统一配置
+     */
     @RestControllerAdvice
     static class CommonResultResponseAdvice implements ResponseBodyAdvice<Object> {
 

@@ -2,6 +2,7 @@ package yuansim.controller;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+import yuansim.view.controller.BaseRestController;
 
 import java.util.Arrays;
 import java.util.List;
