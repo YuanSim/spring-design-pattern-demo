@@ -11,7 +11,6 @@ import yuansim.payment.Pay;
  * @Author: Simon.Mr
  * @Created 2019/12/31
  */
-@Component
 public class UnionPay implements Pay {
 
     @Override
