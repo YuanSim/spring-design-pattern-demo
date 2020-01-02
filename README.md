@@ -26,6 +26,7 @@
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [sim-framework-template-demo](./sim-framework-template-demo) | 架构模块pom                                                       |
 | [spring-design-pattern-demo-dependencies](./spring-design-pattern-demo-dependencies)|   包管理                               |
-| [spring-strategy-pattern-demo](./spring-strategy-pattern-demo)|   策略模式pom                                                 |                                        |
-| [spring-responsibility-chain-demo](./spring-responsibility-chain-demo)|   责任链模式                                           |
 | [spring-http-template-demo](./spring-http-template-demo) | 关于请求与返回的有些全局配置                                             |
+| [spring-responsibility-chain-demo](./spring-responsibility-chain-demo)|   责任链模式                                           |
+| [spring-strategy-pattern-demo](./spring-strategy-pattern-demo)|   策略模式pom                                                 |                                        |
+| [spring-template-method-pattern-demo](./spring-template-method-pattern-demo)|   模板模式                      |
