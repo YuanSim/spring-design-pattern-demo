@@ -15,6 +15,7 @@
         <module>spring-strategy-pattern-normal</module>
         <module>spring-strategy-pattern-utils</module>
         <module>spring-strategy-pattern-db</module>
+        <module>spring-strategy-pattern-factory</module>
     </modules>
 
     <properties>
