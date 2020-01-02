@@ -3,28 +3,25 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>sim-framework-template-demo</artifactId>
+        <artifactId>spring-design-pattern-demo</artifactId>
         <groupId>yuan-sim</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <artifactId>spring-http-template-demo</artifactId>
     <packaging>pom</packaging>
-    <artifactId>sim-framework-template-config</artifactId>
-
     <modules>
-        <module>sim-framework-template-restful-config</module>
+        <module>spring-restful-template-demo</module>
     </modules>
 
     <properties>
-        <sim.framwork.template.core.entity.version>1.0-SNAPSHOT</sim.framwork.template.core.entity.version>
+        <spring.design.pattern.demo.dependencies>1.0-SNAPSHOT</spring.design.pattern.demo.dependencies>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>yuan-sim</groupId>
-            <artifactId>sim-framework-template-core-entity</artifactId>
-            <version>${sim.framwork.template.core.entity.version}</version>
+            <artifactId>spring-design-pattern-demo-dependencies</artifactId>
+            <version>${spring.design.pattern.demo.dependencies}</version>
         </dependency>
     </dependencies>
-
 </project>

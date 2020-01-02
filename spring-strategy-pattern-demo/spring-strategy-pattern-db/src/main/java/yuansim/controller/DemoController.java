@@ -9,7 +9,7 @@ import yuansim.SpringUtils;
 import yuansim.dao.mapper.PaymentChannelMapper;
 import yuansim.dao.dto.PaymentChannel;
 import yuansim.payment.Pay;
-import yuansim.view.BaseResource;
+import yuansim.view.BaseResult;
 import yuansim.view.controller.BaseRestController;
 import yuansim.view.exception.DataException;
 import yuansim.view.exception.ViewParamException;
@@ -29,7 +29,7 @@ public class DemoController extends BaseRestController {
 
 
     @PostMapping(value = "/strategy/normal/pay")
-    public BaseResource pay(@RequestParam String code) {
+    public BaseResult pay(@RequestParam String code) {
 
         if(StringUtils.isEmpty(code)) {
 
@@ -59,7 +59,7 @@ public class DemoController extends BaseRestController {
 
         String call = pay.call();
 
-        return BaseResource.fromSuccess(call);
+        return BaseResult.fromSuccess(call);
 
     }
 

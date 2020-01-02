@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 import yuansim.factory.StrategyFactory;
 import yuansim.payment.Pay;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * @QQ交流群: 648741281
  * @Email: 177300883312@163.com
@@ -17,7 +20,7 @@ import yuansim.payment.Pay;
 public class DemoController {
 
     @PostMapping(value = "/strategy/factory/pay")
-    public String pay(@RequestParam String payType) {
+    public List<String> pay(@RequestParam String payType) {
 
         StrategyFactory strategyFactory = StrategyFactory.getInstance();
 
@@ -27,7 +30,7 @@ public class DemoController {
 
         System.out.println(call);
 
-         return pay.call();
+         return Arrays.asList(call);
 
     }
 

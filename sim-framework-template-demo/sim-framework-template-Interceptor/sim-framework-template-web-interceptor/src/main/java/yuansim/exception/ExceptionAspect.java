@@ -5,7 +5,7 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
-import yuansim.view.BaseResource;
+import yuansim.view.BaseResult;
 import yuansim.view.exception.DataException;
 import yuansim.view.exception.ViewParamException;
 
@@ -38,16 +38,16 @@ public class ExceptionAspect {
 
             if (t instanceof ViewParamException) {
 
-                return BaseResource.fromError(((ViewParamException) t).getName());
+                return BaseResult.fromError(((ViewParamException) t).getName());
 
             }
 
             if(t instanceof DataException) {
 
-                return BaseResource.fromError(((DataException) t).getName());
+                return BaseResult.fromError(((DataException) t).getName());
             }
 
-            return BaseResource.fromError("系统开小差了");
+            return BaseResult.fromError("系统开小差了");
 
         }
 

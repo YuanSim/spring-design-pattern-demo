@@ -10,7 +10,7 @@ import lombok.Data;
  * @Created 2019/12/31
  */
 @Data
-public class BaseResource<T> {
+public class BaseResult<T> {
 
     /**
      * 响应码
@@ -27,7 +27,7 @@ public class BaseResource<T> {
      */
     private T body;
 
-    public static <T> BaseResource<T> fromError(String message) {
+    public static <T> BaseResult<T> fromError(String message) {
         return fromError(500, message);
     }
 
@@ -37,8 +37,8 @@ public class BaseResource<T> {
      * @param <T>
      * @return
      */
-    public static <T> BaseResource<T> fromError(int result, String message) {
-        BaseResource<T> resource = new BaseResource<>();
+    public static <T> BaseResult<T> fromError(int result, String message) {
+        BaseResult<T> resource = new BaseResult<>();
         resource.result = result;
         resource.message = message;
         return resource;
@@ -51,8 +51,8 @@ public class BaseResource<T> {
      * @param <T>
      * @return
      */
-    public static <T> BaseResource<T> fromSuccess(T body) {
-        BaseResource<T> resource = new BaseResource<>();
+    public static <T> BaseResult<T> fromSuccess(T body) {
+        BaseResult<T> resource = new BaseResult<>();
         resource.result = 200;
         resource.body = body;
         return resource;
