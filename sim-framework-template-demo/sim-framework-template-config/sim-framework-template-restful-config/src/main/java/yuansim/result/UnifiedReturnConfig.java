@@ -1,5 +1,6 @@
 package yuansim.result;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -20,9 +21,12 @@ import yuansim.view.exception.BusinessException;
  * @Author: Simon.Mr
  * @Created 2020/1/2
  */
+@Slf4j
 @EnableWebMvc
 @Configuration
 public class UnifiedReturnConfig {
+
+
 
     /**
      * 统一 异常配置
@@ -30,10 +34,29 @@ public class UnifiedReturnConfig {
     @RestControllerAdvice
     static class UnifiedExceptionHandler{
 
+        /**
+         * 顶级异常处理
+         *
+         * @param e 异常
+         * @return 响应客户端
+         */
+        @ExceptionHandler(Exception.class)
+        public CommonResult<Void> handleException(Exception e) {
+            log.error("发生顶级异常：{}",e);
+            return CommonResult.errorResult("500","系统异常，请联系管理员");
+        }
+
+        /**
+         * 自定义异常配置
+         * @param be
+         * @return
+         */
         @ExceptionHandler(BusinessException.class)
         public CommonResult<Void> handleBusinessException(BusinessException be){
             return CommonResult.errorResult(be.getErrorCode(), be.getErrorMsg());
         }
+
+
     }
 
 

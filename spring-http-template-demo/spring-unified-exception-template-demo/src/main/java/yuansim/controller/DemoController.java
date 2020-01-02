@@ -24,6 +24,15 @@ public class DemoController {
     private DemoService demoService;
 
     /**
+     * 测试非自定义异常
+     */
+    @GetMapping("/demo/number/format/exception")
+    public List<String> demo() {
+
+        throw new NumberFormatException();
+    }
+
+    /**
      * 测试service 抛出异常 并查看 @ResponseBody的情况
      * @param id
      * @return

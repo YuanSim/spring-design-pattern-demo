@@ -3,6 +3,22 @@
 
 ### 异常全局demo
 
+### 非自定义异常
+```aidl
+ /**
+     * 测试非自定义异常
+     */
+    @GetMapping("/demo/number/format/exception")
+    public List<String> demo() {
+
+        throw new NumberFormatException();
+    }
+
+```
+
+
+### 自定义异常
+
 > controller
 ```aidl
   /**
