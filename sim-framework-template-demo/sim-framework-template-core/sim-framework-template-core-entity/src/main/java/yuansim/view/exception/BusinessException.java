@@ -1,5 +1,6 @@
 package yuansim.view.exception;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
@@ -10,6 +11,7 @@ import lombok.Data;
  * @Created 2020/1/2
  */
 @Data
+@AllArgsConstructor
 public class BusinessException extends RuntimeException{
 
     private String errorCode;

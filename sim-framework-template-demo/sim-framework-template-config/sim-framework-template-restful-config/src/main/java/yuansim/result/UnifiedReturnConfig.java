@@ -38,7 +38,7 @@ public class UnifiedReturnConfig {
 
 
     /**
-     * 返回值 responseBody 统一配置
+     * 返回值 @ResponseBody 统一配置
      */
     @RestControllerAdvice
     static class CommonResultResponseAdvice implements ResponseBodyAdvice<Object> {
