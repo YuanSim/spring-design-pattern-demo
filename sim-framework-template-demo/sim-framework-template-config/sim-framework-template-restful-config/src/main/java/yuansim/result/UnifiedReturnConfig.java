@@ -31,6 +31,9 @@ public class UnifiedReturnConfig implements WebMvcConfigurer {
 
     @Override
     public void addFormatters(FormatterRegistry registry) {
+        /**
+         * 注册
+         */
         registry.addConverter(new LocalDateTimeConverter.StringToLocalDateTimeConverter());
     }
 

@@ -2,6 +2,55 @@
 
 ### springboot 数据绑定
 
+> 自定义枚举 demo
+>关于枚举在新版本中 springboot已经实现过的
+```
+ /**
+     * 数据自定义绑定测试-- 枚举
+     */
+    @GetMapping(value = "/bind/enum/{str}")
+    public PayType getLocalDateTime(@PathVariable(value = "str") PayType pay) {
+
+        System.out.println("测试");
+
+        return pay;
+    }
+
+```
+
+```aidl
+public class EnumConverter {
+
+    /**
+     * 自定义枚举转换
+     */
+    public static class StringToEnumConverter implements Converter<String, PayType> {
+
+        @Override
+        public PayType convert(String s) {
+            return PayType.valueOf(s);
+        }
+    }
+
+}
+```
+
+```java
+@Configuration
+public class EnumConverterConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addFormatters(FormatterRegistry registry) {
+        /**
+         * 注册
+         */
+        registry.addConverter(new EnumConverter.StringToEnumConverter());
+    }
+}
+
+```
+
+> LocalDate demo
 ```aidl
  /**
      *  LocalDateTime 数据自定义绑定测试
