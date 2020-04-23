@@ -14,6 +14,7 @@
         <module>spring-template-method-pattern-demo</module>
         <module>sim-framework-template-demo</module>
         <module>spring-http-template-demo</module>
+        <module>spring-rabbitmq-template-demo</module>
     </modules>
     <packaging>pom</packaging>
 
