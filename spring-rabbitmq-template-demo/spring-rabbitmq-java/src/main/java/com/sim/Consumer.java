@@ -16,13 +16,36 @@ public class Consumer {
 
     private static final String QUEUE_NAME = "demo-java";
 
+    /**
+     * 测试多消费不同性能耗时
+     */
+    private static final int time = 1000;
+
     public static void main(String[] args) throws IOException, TimeoutException {
 
+        ptp();
+    }
+
+    /**
+     * 点对点
+     * @throws IOException
+     * @throws TimeoutException
+     */
+    public static void ptp() throws IOException, TimeoutException {
+        System.out.println("我是消费端1号");
         //1:创建连接
         Connection connection = RabbitMQConnection.getConnection();
 
         //2:创建通道
         Channel channel = connection.createChannel();
+
+        //5: 使用手动签收机制，设置为工作队列  公平队列
+        /**
+         * 设置为每次只消费1条消息，并且结合手动签收机制
+         * 如果未签收那么不会在传递消息过来
+         * 已达到能者多劳的效果
+         */
+        channel.basicQos(1);
 
         DefaultConsumer defaultConsumer = new DefaultConsumer(channel){
             @Override
@@ -32,8 +55,16 @@ public class Consumer {
                                        byte[] body)
                     throws IOException
             {
-               String msg = new String(body,"UTF-8");
+                String msg = new String(body,"UTF-8");
                 System.out.println("消费消息：" + msg);
+
+                try {
+                    Thread.sleep(time);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                //4: 设置手动签收
                 channel.basicAck(envelope.getDeliveryTag(),false);
             }
         };
@@ -45,7 +76,7 @@ public class Consumer {
          */
         channel.basicConsume(QUEUE_NAME,false,defaultConsumer);
 
-        channel.close();
-        connection.close();
+      /*  channel.close();
+        connection.close();*/
     }
 }

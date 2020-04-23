@@ -1,9 +1,9 @@
-package com.sim;
+package com.sim.exchange.fanout;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
+import com.sim.RabbitMQConnection;
 
-import javax.sound.midi.Soundbank;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
@@ -18,7 +18,6 @@ import java.util.concurrent.TimeoutException;
  */
 public class Producer {
 
-    public static final String QUEUE_NAME = "demo-java";
 
     /**
      *
@@ -28,19 +27,17 @@ public class Producer {
      */
     public static void main(String[] args) throws IOException, TimeoutException, InterruptedException {
 
-        ptp();
-
+        fanout();
     }
 
-
-
     /**
-     * 点对点模式
-     * @throws IOException
-     * @throws TimeoutException
-     * @throws InterruptedException
+     * 交换机名称
      */
-    public static void ptp()  throws IOException, TimeoutException, InterruptedException{
+    private static final String EXCHANGE_NAME = "fanout-sim";
+    /**
+     * 交换机 fanout模式
+     */
+    public static void fanout() throws IOException, TimeoutException, InterruptedException{
 
         System.out.println("生产者启动...");
         //1：创建链接
@@ -49,20 +46,20 @@ public class Producer {
         //2：创建通道
         Channel channel = connection.createChannel();
 
-        // 开启消息投递确认
-        channel.confirmSelect();
-        for(int i = 0 ; i < 10 ; i ++){
+        /**
+         * 参数解释
+         *  交换机名称
+         *  交换机类型
+         *  是否持久化 *** 这个比较坑，mq管理平台创建的交换机默认是持久化的，java默认创建的是非持久化 不指定的话 会保存
+         */
+        channel.exchangeDeclare(EXCHANGE_NAME,"fanout",true);
 
-            String msg = "我是生产者发送的第" + i + "消息";
-            channel.basicPublish("",QUEUE_NAME,null,msg.getBytes());
-            if(channel.waitForConfirms()){
-                System.out.println("生产者发送消息成功:" + msg);
-            }
-
-        }
-
+        String msg = "我是生产者通过交换机fanout类型过来的";
+        channel.basicPublish(EXCHANGE_NAME,"",null,msg.getBytes());
         channel.close();
         connection.close();
     }
+
+
 
 }
