@@ -58,7 +58,13 @@
 
             <dependency>
                 <groupId>yuan-sim</groupId>
-                <artifactId>sim-framework-template-core-entity</artifactId>
+                <artifactId>sim-framework-template-core-yuansim.entity</artifactId>
+                <version>${sim.framework.core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>yuan-sim</groupId>
+                <artifactId>sim-framework-template-core-util</artifactId>
                 <version>${sim.framework.core.version}</version>
             </dependency>
 

@@ -1,0 +1,12 @@
+spring:
+  rabbitmq:
+    ####连接地址
+    host: 127.0.0.1
+    ####端口号
+    port: 5672
+    ####账号
+    username: jfc
+    ####密码
+    password: 174ZZLY.Com
+    ### 地址
+    virtual-host: jfc-host

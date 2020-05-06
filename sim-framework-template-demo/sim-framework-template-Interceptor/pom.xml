@@ -18,7 +18,7 @@
 
     <properties>
         <aspectjweaver.version>1.9.2</aspectjweaver.version>
-        <sim.framework.template.core.entity.version>1.0-SNAPSHOT</sim.framework.template.core.entity.version>
+        <sim.framework.template.core.yuansim.entity.version>1.0-SNAPSHOT</sim.framework.template.core.yuansim.entity.version>
     </properties>
 
     <dependencies>
@@ -31,8 +31,8 @@
 
             <dependency>
                 <groupId>yuan-sim</groupId>
-                <artifactId>sim-framework-template-core-entity</artifactId>
-                <version>${sim.framework.template.core.entity.version}</version>
+                <artifactId>sim-framework-template-core-yuansim.entity</artifactId>
+                <version>${sim.framework.template.core.yuansim.entity.version}</version>
             </dependency>
     </dependencies>
 </project>

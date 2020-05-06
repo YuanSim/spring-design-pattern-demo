@@ -37,7 +37,7 @@ public class DemoController {
      * @param id
      * @return
      */
-    @GetMapping("/service/{id}")
+    @GetMapping("/yuansim.service/{id}")
     @ResponseBody
     public List<String> findUsers(@PathVariable Long id){
 

@@ -6,7 +6,7 @@
 ## 模块介绍
 | Module 名称                                                  | Module 介绍                                                    |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [sim-framework-template-core-entity](./sim-framework-template-core-entity)|   全局的基础类 |
+| [sim-framework-template-core-yuansim.entity](./sim-framework-template-core-yuansim.entity)|   全局的基础类 |
 
 
 

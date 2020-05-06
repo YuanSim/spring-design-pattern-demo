@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>yuan-sim</groupId>
-            <artifactId>spring-strategy-pattern-utils</artifactId>
+            <artifactId>spring-strategy-pattern-yuansim.utils</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 

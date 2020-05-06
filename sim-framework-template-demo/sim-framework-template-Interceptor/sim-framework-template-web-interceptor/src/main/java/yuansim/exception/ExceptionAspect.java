@@ -20,7 +20,7 @@ import yuansim.view.exception.ViewParamException;
 @Component(value = "simFrameworkTemplateCoreExceptionAspect")
 public class ExceptionAspect {
 
-    @Pointcut("target(yuansim.view.controller.BaseRestController)")
+    @Pointcut("target(yuansim.view.yuansim.controller.BaseRestController)")
     public void exception() {
     }
 

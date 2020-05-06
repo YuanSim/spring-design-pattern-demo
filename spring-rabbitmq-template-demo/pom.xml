@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-rabbitmq-java</module>
+        <module>spring-boot-rabbitmq</module>
     </modules>
 
     <artifactId>spring-rabbitmq-template-demo</artifactId>

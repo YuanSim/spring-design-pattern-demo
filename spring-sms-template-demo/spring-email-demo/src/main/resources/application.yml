@@ -1,0 +1,9 @@
+spring:
+  mail:
+    host: smtp.exmail.qq.com
+    username: 2124707948@qq.com
+    password: SimUU1234
+    port: 465
+    protocol: smtp
+    default-encoding: utf-8
+

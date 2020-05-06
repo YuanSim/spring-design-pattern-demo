@@ -14,7 +14,7 @@ import java.util.concurrent.TimeoutException;
  * @Author: Simon.Mr
  * @Created 2020/4/23
  *
- *
+ * 主体模式
  */
 public class Producer {
 
@@ -35,7 +35,7 @@ public class Producer {
      */
     private static final String EXCHANGE_NAME = "topic-sim";
     /**
-     * 交换机 fanout模式
+     * 交换机 topic模式
      */
     public static void topic() throws IOException, TimeoutException{
 

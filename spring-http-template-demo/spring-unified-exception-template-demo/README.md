@@ -19,7 +19,7 @@
 
 ### 自定义异常
 
-> controller
+> yuansim.controller
 ```aidl
   /**
      * 测试controller 抛出异常
@@ -32,14 +32,14 @@
     }
 ```
 
-> service
+> yuansim.service
 ```aidl
  /**
      * 测试service 抛出异常 并查看 @ResponseBody的情况
      * @param id
      * @return
      */
-    @GetMapping("/service/{id}")
+    @GetMapping("/yuansim.service/{id}")
     @ResponseBody
     public List<String> findUsers(@PathVariable Long id){
 

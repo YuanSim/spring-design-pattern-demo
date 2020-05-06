@@ -14,7 +14,7 @@ import java.util.concurrent.TimeoutException;
  * @Author: Simon.Mr
  * @Created 2020/4/23
  *
- *
+ * 扇形交换机
  */
 public class Producer {
 

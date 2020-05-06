@@ -14,7 +14,7 @@ import java.util.concurrent.TimeoutException;
  * @Author: Simon.Mr
  * @Created 2020/4/23
  *
- *
+ * 直连交换机
  */
 public class Producer {
 
@@ -38,7 +38,7 @@ public class Producer {
      */
     private static final String EXCHANGE_NAME = "direct-sim";
     /**
-     * 交换机 fanout模式
+     * 交换机 direct模式
      */
     public static void direct() throws IOException, TimeoutException{
 
