@@ -15,9 +15,10 @@ public class AgentTargetSample {
 
     public static void main(String[] args) throws InterruptedException {
         AgentTargetSample targetSample = new AgentTargetSample();
-        for (; ; ) {
+        while (true){
             Thread.sleep(1000);
             targetSample.sayHello(Thread.currentThread().getName());
         }
+
     }
 }

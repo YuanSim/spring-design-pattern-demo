@@ -40,16 +40,17 @@
 
 ```
    public void sayHello(String name) {
-        System.out.println(String.format("%s 我是被代理程序 通过agent模式代理!", name));
-    }
-
-    public static void main(String[] args) throws InterruptedException {
-        AgentTargetSample targetSample = new AgentTargetSample();
-        for (; ; ) {
-            Thread.sleep(1000);
-            targetSample.sayHello(Thread.currentThread().getName());
-        }
-    }
+          System.out.println(String.format("%s 我是被代理程序 通过agent模式代理!", name));
+      }
+  
+      public static void main(String[] args) throws InterruptedException {
+          AgentTargetSample targetSample = new AgentTargetSample();
+          while (true){
+              Thread.sleep(1000);
+              targetSample.sayHello(Thread.currentThread().getName());
+          }
+  
+      }
 ```
 
 
