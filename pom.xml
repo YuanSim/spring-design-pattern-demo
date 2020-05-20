@@ -16,6 +16,7 @@
         <module>spring-http-template-demo</module>
         <module>spring-rabbitmq-template-demo</module>
         <module>spring-sms-template-demo</module>
+        <module>spring-Instrumentation-demo</module>
     </modules>
     <packaging>pom</packaging>
 

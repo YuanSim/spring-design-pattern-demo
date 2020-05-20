@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring-design-pattern-demo</artifactId>
+        <groupId>yuan-sim</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>spring-Instrumentation-demo</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>java-premain-Instrumentation</module>
+        <module>java-instrumentation-test</module>
+        <module>java-agentmain-Instrumentation</module>
+        <module>java-attach-agentmain-Instrumentation</module>
+        <module>java-target-agent-Instrumentation</module>
+    </modules>
+
+
+</project>
