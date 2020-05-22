@@ -17,6 +17,7 @@
         <module>spring-rabbitmq-template-demo</module>
         <module>spring-sms-template-demo</module>
         <module>spring-Instrumentation-demo</module>
+        <module>spring-asm-demo</module>
     </modules>
     <packaging>pom</packaging>
 
