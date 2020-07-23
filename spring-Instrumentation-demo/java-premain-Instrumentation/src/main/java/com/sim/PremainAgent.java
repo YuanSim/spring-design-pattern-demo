@@ -18,7 +18,7 @@ public class PremainAgent {
      * 在开发者逻辑看来就是：所有类首次加载并且进入程序main()方法之前，premain方法会被激活，
      * 然后所有被加载的类都会执行ClassFileTransformer列表中的回调
      *
-     * @param agentArgs
+     * @param agentArgs agentArgs是premain函数得到的程序参数，通过– javaagent命令行参数传入。
      * @param inst
      */
     public static void premain(String agentArgs, Instrumentation inst){

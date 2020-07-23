@@ -18,6 +18,8 @@
         <module>spring-sms-template-demo</module>
         <module>spring-Instrumentation-demo</module>
         <module>spring-asm-demo</module>
+        <module>spring-lambda-demo</module>
+        <module>spring-function-demo</module>
     </modules>
     <packaging>pom</packaging>
 
