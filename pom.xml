@@ -21,6 +21,16 @@
         <module>spring-lambda-demo</module>
         <module>spring-function-demo</module>
     </modules>
+
+    <properties>
+        <sim.framework.template.demo.version>1.0-SNAPSHOT</sim.framework.template.demo.version>
+        <sim.framework.core.version>1.0-SNAPSHOT</sim.framework.core.version>
+        <sim.framework.template.interceptor.version>1.0-SNAPSHOT</sim.framework.template.interceptor.version>
+        <sim.framework.template.config.version>1.0-SNAPSHOT</sim.framework.template.config.version>
+        <spring.design.pattern.demo.dependencies>1.0-SNAPSHOT</spring.design.pattern.demo.dependencies>
+        <commons.lang.version>3.8.1</commons.lang.version>
+    </properties>
+
     <packaging>pom</packaging>
 
     <parent>

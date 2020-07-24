@@ -34,7 +34,7 @@ public final class CommonResult<T> {
 
 
     public static <T> CommonResult<T> errorResult(String errorCode, String errorMsg){
-        CommonResult<T> commonResult = new CommonResult<>();
+        CommonResult commonResult = new CommonResult<>();
         commonResult.errorCode = errorCode;
         commonResult.errorMsg = errorMsg;
         commonResult.status = -1;

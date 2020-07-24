@@ -12,5 +12,18 @@
     <artifactId>sim-framework-template-web-interceptor</artifactId>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectjweaver.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>yuan-sim</groupId>
+            <artifactId>sim-framework-template-core-entity</artifactId>
+            <version>${sim.framework.template.core.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>

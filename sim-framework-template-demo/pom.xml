@@ -17,10 +17,6 @@
     <artifactId>sim-framework-template-demo</artifactId>
 
 
-    <properties>
-        <commons.lang.version>3.8.1</commons.lang.version>
-    </properties>
-
 
     <dependencies>
 

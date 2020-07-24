@@ -13,6 +13,13 @@
 
 
 
+    <dependencies>
+        <dependency>
+            <groupId>yuan-sim</groupId>
+            <artifactId>sim-framework-template-core-entity</artifactId>
+            <version>${sim.framwork.template.core.version}</version>
+        </dependency>
+    </dependencies>
 
 
 </project>

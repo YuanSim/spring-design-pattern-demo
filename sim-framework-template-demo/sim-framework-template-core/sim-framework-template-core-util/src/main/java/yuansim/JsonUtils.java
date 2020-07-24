@@ -5,9 +5,14 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.util.StringUtils;
+import yuansim.date.LocalDateTimeSerializerConfig;
+import yuansim.jackson.LocalDateTimeDeserializer;
+import yuansim.jackson.LocalDateTimeSerializer;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -22,6 +27,11 @@ public class JsonUtils {
 		result.configure(JsonParser.Feature.ALLOW_SINGLE_QUOTES, true);
 		result.setSerializationInclusion(JsonInclude.Include.NON_NULL);
 		result.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+		JavaTimeModule javaTimeModule = new JavaTimeModule();
+		javaTimeModule.addSerializer(LocalDateTime.class, new LocalDateTimeSerializer(LocalDateTimeSerializerConfig.PATTERN));
+		javaTimeModule.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer(LocalDateTimeSerializerConfig.PATTERN));
+		result.registerModule(javaTimeModule);
 		return result;
 	}
 

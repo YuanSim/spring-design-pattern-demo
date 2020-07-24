@@ -18,21 +18,8 @@
 
     <properties>
         <aspectjweaver.version>1.9.2</aspectjweaver.version>
-        <sim.framework.template.core.yuansim.entity.version>1.0-SNAPSHOT</sim.framework.template.core.yuansim.entity.version>
+        <sim.framework.template.core.version>1.0-SNAPSHOT</sim.framework.template.core.version>
     </properties>
 
-    <dependencies>
 
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>${aspectjweaver.version}</version>
-        </dependency>
-
-            <dependency>
-                <groupId>yuan-sim</groupId>
-                <artifactId>sim-framework-template-core-yuansim.entity</artifactId>
-                <version>${sim.framework.template.core.yuansim.entity.version}</version>
-            </dependency>
-    </dependencies>
 </project>

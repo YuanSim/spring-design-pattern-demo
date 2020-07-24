@@ -16,9 +16,6 @@
         <module>spring-data-bind-template-demo</module>
     </modules>
 
-    <properties>
-        <spring.design.pattern.demo.dependencies>1.0-SNAPSHOT</spring.design.pattern.demo.dependencies>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>yuan-sim</groupId>

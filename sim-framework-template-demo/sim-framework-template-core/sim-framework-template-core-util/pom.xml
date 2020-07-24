@@ -12,4 +12,13 @@
     <artifactId>sim-framework-template-core-util</artifactId>
 
 
+    <dependencies>
+
+        <dependency>
+            <groupId>yuan-sim</groupId>
+            <artifactId>sim-framework-template-utils-config</artifactId>
+            <version>${sim.framwork.template.config}</version>
+        </dependency>
+    </dependencies>
+
 </project>

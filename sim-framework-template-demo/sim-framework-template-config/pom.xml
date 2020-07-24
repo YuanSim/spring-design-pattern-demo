@@ -16,15 +16,9 @@
     </modules>
 
     <properties>
-        <sim.framwork.template.core.yuansim.entity.version>1.0-SNAPSHOT</sim.framwork.template.core.yuansim.entity.version>
+        <sim.framwork.template.core.version>1.0-SNAPSHOT</sim.framwork.template.core.version>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>yuan-sim</groupId>
-            <artifactId>sim-framework-template-core-yuansim.entity</artifactId>
-            <version>${sim.framwork.template.core.yuansim.entity.version}</version>
-        </dependency>
-    </dependencies>
+
 
 </project>

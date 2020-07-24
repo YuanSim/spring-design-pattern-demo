@@ -23,25 +23,29 @@
         <url>https://github.com/。。。</url>
     </scm>
 
-    <properties>
-        <sim.framework.template.demo.version>1.0-SNAPSHOT</sim.framework.template.demo.version>
-        <sim.framework.core.version>1.0-SNAPSHOT</sim.framework.core.version>
-        <sim.framework.template.interceptor.version>1.0-SNAPSHOT</sim.framework.template.interceptor.version>
-        <sim.framework.template.config.version>1.0-SNAPSHOT</sim.framework.template.config.version>
-    </properties>
+
+
+
+    <dependencyManagement>
 
         <dependencies>
+
+            <dependency>
+                <groupId>yuan-sim</groupId>
+                <artifactId>sim-framework-template-utils-config</artifactId>
+                <version>${sim.framework.template.config.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>yuan-sim</groupId>
                 <artifactId>sim-framework-template-restful-config</artifactId>
                 <version>${sim.framework.template.config.version}</version>
             </dependency>
-            <dependency>
+      <!--      <dependency>
                 <groupId>yuan-sim</groupId>
                 <artifactId>sim-framework-template-config</artifactId>
                 <version>${sim.framework.template.config.version}</version>
-            </dependency>
+            </dependency>-->
 
 
             <dependency>
@@ -58,7 +62,7 @@
 
             <dependency>
                 <groupId>yuan-sim</groupId>
-                <artifactId>sim-framework-template-core-yuansim.entity</artifactId>
+                <artifactId>sim-framework-template-core-entity</artifactId>
                 <version>${sim.framework.core.version}</version>
             </dependency>
 
@@ -74,5 +78,6 @@
                 <version>${sim.framework.template.demo.version}</version>
             </dependency>
         </dependencies>
+    </dependencyManagement>
 
 </project>
