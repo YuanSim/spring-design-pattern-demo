@@ -13,6 +13,7 @@
         <module>sim-framework-template-Interceptor</module>
         <module>sim-framework-template-config</module>
         <module>sim-framework-template-core</module>
+        <module>sim-auto-doc</module>
     </modules>
     <artifactId>sim-framework-template-demo</artifactId>
 

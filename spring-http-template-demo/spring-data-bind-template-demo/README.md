@@ -18,7 +18,7 @@
 
 ```
 
-```aidl
+```
 public class EnumConverter {
 
     /**

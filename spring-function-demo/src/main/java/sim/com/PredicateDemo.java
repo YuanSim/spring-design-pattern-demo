@@ -28,7 +28,11 @@ public class PredicateDemo {
 
 //        or();
 
-        isEqual();
+//        isEqual();
+        Boolean a = true;
+        Predicate<Boolean> b  = x-> x != null && a ;
+
+        System.out.println(b.test(a));
     }
 
     /**

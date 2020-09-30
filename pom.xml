@@ -20,6 +20,8 @@
         <module>spring-asm-demo</module>
         <module>spring-lambda-demo</module>
         <module>spring-function-demo</module>
+        <module>spring-config-demo</module>
+        <module>jdk-characteristic-demo</module>
     </modules>
 
     <properties>
