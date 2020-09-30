@@ -1,5 +1,6 @@
 package yuan.sim.config;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import yuan.sim.constants.ApiAnnotationConstants;
@@ -9,7 +10,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import static yuan.sim.constants.DefaultPackageName.ENCODING;
-import static yuan.sim.constants.DefaultPackageName.PACKAGE_NAMES;
 
 /**
  * 基础配置
@@ -21,6 +21,7 @@ import static yuan.sim.constants.DefaultPackageName.PACKAGE_NAMES;
  */
 @Data
 @Builder
+@AllArgsConstructor
 public class AutoDocConfig {
 
     /**
@@ -39,11 +40,6 @@ public class AutoDocConfig {
     private String outPath;
 
     /**
-     * 需要被解析的包名，默认只解析controller api下面的接口
-     */
-    private String[] parsePackageNames;
-
-    /**
      * 编码格式 默认UTF-8
      */
     private Charset encoding;
@@ -55,7 +51,6 @@ public class AutoDocConfig {
 
     public AutoDocConfig() {
 
-        this.parsePackageNames = PACKAGE_NAMES;
         this.encoding = Charset.forName(ENCODING);
         this.scanAnnotationNames = Arrays.asList(ApiAnnotationConstants.CONTROLLER_NAME,ApiAnnotationConstants.REST_CONTROLLER_NAME);
 

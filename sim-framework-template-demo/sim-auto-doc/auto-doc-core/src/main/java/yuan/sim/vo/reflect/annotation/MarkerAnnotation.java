@@ -1,6 +1,7 @@
 package yuan.sim.vo.reflect.annotation;
 
 
+import lombok.EqualsAndHashCode;
 import yuan.sim.vo.reflect.Annotation;
 
 /**
@@ -10,5 +11,6 @@ import yuan.sim.vo.reflect.Annotation;
  * @Author: Simon.Mr
  * @Created 2020/9/30
  */
+@EqualsAndHashCode(callSuper = false)
 public class MarkerAnnotation extends Annotation {
 }

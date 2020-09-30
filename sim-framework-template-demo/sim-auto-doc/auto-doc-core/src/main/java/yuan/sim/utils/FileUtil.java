@@ -39,7 +39,6 @@ public class FileUtil {
             return null;
         }
 
-        String[] names = autoDocConfig.getParsePackageNames();
         List<String> files = new ArrayList<String>();
         for(File childFile : childFiles){
 
@@ -62,13 +61,7 @@ public class FileUtil {
                 if(!childFilePath.endsWith(PACKAGE_SUFFIX)) {
                     continue;
                 }
-
-                for(String name : names) {
-                    if(childFilePath.contains(name)) {
-                        files.add(name);
-                    }
-                }
-
+                files.add(childFilePath);
             }
         }
 

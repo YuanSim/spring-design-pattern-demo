@@ -1,8 +1,6 @@
 package yuan.sim.vo.reflect;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.util.CollectionUtils;
 
 import java.util.List;
@@ -42,6 +40,8 @@ public class Comment {
     @Data
     @Builder
     @NoArgsConstructor
+    @AllArgsConstructor
+    @EqualsAndHashCode(callSuper = false)
     public static class Tag {
 
         private  String tagName;

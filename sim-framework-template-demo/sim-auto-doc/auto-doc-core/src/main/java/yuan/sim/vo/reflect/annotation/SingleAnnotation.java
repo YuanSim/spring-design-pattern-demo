@@ -1,6 +1,7 @@
 package yuan.sim.vo.reflect.annotation;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import yuan.sim.vo.reflect.Annotation;
 
 /**
@@ -11,6 +12,7 @@ import yuan.sim.vo.reflect.Annotation;
  * @Created 2020/9/30
  */
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class SingleAnnotation extends Annotation {
 
     private String value;

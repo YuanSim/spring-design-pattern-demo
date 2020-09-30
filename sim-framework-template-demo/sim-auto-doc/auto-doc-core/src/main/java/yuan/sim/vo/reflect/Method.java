@@ -1,6 +1,7 @@
 package yuan.sim.vo.reflect;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
  * @Created 2020/9/30
  */
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class Method extends Structure{
 
     /**

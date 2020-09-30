@@ -1,7 +1,9 @@
 package yuan.sim.vo.reflect.annotation;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.springframework.util.CollectionUtils;
 import yuan.sim.vo.reflect.Annotation;
 
@@ -16,12 +18,15 @@ import java.util.Optional;
  * @Created 2020/9/30
  */
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class NormalAnnotation extends Annotation {
 
     private List<Pair> pairList;
 
     @Data
     @Builder
+    @EqualsAndHashCode(callSuper = false)
+    @AllArgsConstructor
     public static class Pair{
         private String name;
         private String value;

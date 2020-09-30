@@ -1,6 +1,7 @@
 package yuan.sim.vo.reflect;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  *
@@ -11,5 +12,6 @@ import lombok.Data;
  * @Created 2020/9/30
  */
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class Field extends Structure{
 }
