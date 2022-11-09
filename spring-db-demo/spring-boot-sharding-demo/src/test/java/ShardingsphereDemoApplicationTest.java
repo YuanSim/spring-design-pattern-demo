@@ -13,6 +13,31 @@ public class ShardingsphereDemoApplicationTest {
     @Autowired
     private OrdersMapper ordersMapper;
 
+
+    /**
+     * 读写分离+分库分表
+     */
+    @Test
+    public void test5(){
+
+        //  写入数据根据分库分表策略
+        for (int i = 112; i <=200 ; i++) {
+            Orders orders = new Orders();
+            orders.setId(i);
+            orders.setCustomerId(i);
+            orders.setOrderType(i);
+            orders.setAmount(1000.0*i);
+            ordersMapper.insert(orders);
+        }
+
+        // 查询， 根据负载+路由策略
+        List<Orders> orders0 = ordersMapper.selectByPage(1, 3);
+        System.out.println(orders0);
+
+        List<Orders> orders1 = ordersMapper.selectByPage(1, 3);
+        System.out.println(orders1);
+    }
+
     @Test
     public void addOrders(){
         for (int i = 12; i <=100 ; i++) {
