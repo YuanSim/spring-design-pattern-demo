@@ -33,7 +33,7 @@ public interface OrdersMapper {
 
 
 
-    @Select("select * from orders limit #{page}, #{pageSize}")
+    @Select("select * from orders order by id limit #{page}, #{pageSize} ")
     @Results({
             @Result(property = "id",column = "id"),
             @Result(property = "orderType",column = "order_type"),

@@ -37,9 +37,16 @@ public class ShardingsphereDemoApplicationTest {
         System.out.println(orders);
     }
 
+    /**
+     * 读写分离， 从库负载均衡  round_robin
+     */
     @Test
     public void queryOrdersByPage(){
-        List<Orders> orders = ordersMapper.selectByPage(1, 10);
-        System.out.println(orders);
+
+        List<Orders> orders0 = ordersMapper.selectByPage(1, 3);
+        System.out.println(orders0);
+
+        List<Orders> orders1 = ordersMapper.selectByPage(1, 3);
+        System.out.println(orders1);
     }
 }
