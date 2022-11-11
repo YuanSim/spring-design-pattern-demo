@@ -11,11 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.StopWatch;
 
-import java.lang.management.ManagementFactory;
-import java.lang.management.MemoryMXBean;
-import java.lang.management.MemoryUsage;
 import java.util.Iterator;
 import java.util.List;
 
@@ -31,7 +27,26 @@ public class MybatisDemoApplicationTest {
     public void test9(){
 
     }
+    @Test
+    @Transactional
     public void test8(){
+
+
+        long start = System.currentTimeMillis();
+
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        Cursor<Driver> cursor = sqlSession.selectCursor("com.yuansim.dao.CursorDao.findAllByStream");
+
+        System.out.println(  cursor.isOpen());
+        System.out.println(  cursor.isConsumed());
+
+        Iterator<Driver> iterator = cursor.iterator();
+        while (iterator.hasNext()) {
+            Driver next = iterator.next();
+            System.out.println(next);
+        }
+        long end = System.currentTimeMillis();
+        System.out.printf("耗时：" + (end - start));
 
     }
 
@@ -43,9 +58,13 @@ public class MybatisDemoApplicationTest {
         LogUtils.debug("MaxMemory", Runtime.getRuntime().maxMemory()/(1024*1024)+"M");
         LogUtils.debug("UsedMemory", (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())/(1024*1024)+"M");*/
 
+        /**
+         *  错误的使用方式，内存没有减少 (1.9G)
+         *  通过源码调试发现resutSet包含的属性是ResultRowsStatic
+         */
         System.out.println("TotalMemory" +  Runtime.getRuntime().totalMemory()/(1024*1024)+"M");
         long start = System.currentTimeMillis();
-        Cursor<Driver> stream = cursorDao.findByStream(0, 3000);
+        Cursor<Driver> stream = cursorDao.findByStream(0, 3000000);
         stream.forEach(x-> {
             System.out.println("debug---");
             if(true){
