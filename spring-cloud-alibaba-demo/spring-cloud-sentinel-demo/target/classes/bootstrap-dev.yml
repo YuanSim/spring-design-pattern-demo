@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        # 文件后缀
+        file-extension: "yaml"
+        namespace: dd853337-2e5e-4bdb-9f63-3b1de8f9d360
+        group: DEFAULT_GROUP
+
+
+
+# 与sentinel控制台通信配置
+#spring:
+#  cloud:
+#    sentinel:
+#      enabled: true # 是否开启。默认为 true 开启
+#      eager: true  # 是否饥饿加载。默认为 false 关闭
+#      transport: # 假如被占用了会自动从8719开始依次+1扫描。直至找到未被占用的端口，默认8719
+#        dashboard: localhost:8080  # 指定控制台服务的地址
+#      filter:
+#        url-patterns: /**

@@ -7,8 +7,5 @@ spring:
         file-extension: "yaml"
         namespace: dd853337-2e5e-4bdb-9f63-3b1de8f9d360
         group: DEFAULT_GROUP
-        # 开启nacos自动刷新
-#        auto-refresh: true
-        # 允许nacos服务的向本地同步配置
-#        enable-remote-sync-config: true
+
 
