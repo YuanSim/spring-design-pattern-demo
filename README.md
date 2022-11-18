@@ -22,11 +22,23 @@
 
 ## 模块介绍
 
-| Module 名称                                                  | Module 介绍                                                    |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [sim-framework-template-demo](./sim-framework-template-demo) | 架构模块pom                                                       |
-| [spring-design-pattern-demo-dependencies](./spring-design-pattern-demo-dependencies)|   包管理                               |
-| [spring-http-template-demo](./spring-http-template-demo) | 关于请求与返回 全局设置演示                                             |
-| [spring-responsibility-chain-demo](./spring-responsibility-chain-demo)|   责任链模式                                           |
-| [spring-strategy-pattern-demo](./spring-strategy-pattern-demo)|   策略模式pom                                                 |                                        |
-| [spring-template-method-pattern-demo](./spring-template-method-pattern-demo)|   模板模式                      |
+| Module 名称                                                                            | Module 介绍           |
+|--------------------------------------------------------------------------------------|---------------------|
+| [sim-framework-template-demo](./sim-framework-template-demo)                         | 架构模块pom             |
+| [spring-asm-demo](./spring-asm-demo)                                                 | spring操作字节码相关       |
+| [spring-cloud-alibaba-demo](./spring-cloud-alibaba-demo)                             | spring alibaba相关    |
+| [spring-config-demo](./spring-config-demo)                                           | spring配置中心相关        |
+| [spring-db-demo](./spring-db-demo)                                                   | spring整合数据库相关       |
+| [spring-design-pattern-demo-dependencies](./spring-design-pattern-demo-dependencies) | 包管理                 |
+| [spring-excel-demo](./spring-excel-demo)                                             | spring整合excel相关     |
+| [spring-function-demo](./spring-function-demo)                                       | JDK1.8 function操作相关 |
+| [spring-http-template-demo](./spring-http-template-demo)                             | 关于请求与返回 全局设置演示      |
+| [spring-instrumentation-demo](./spring-Instrumentation-demo)                         | 代理相关                |
+| [spring-lambda-demo](./spring-lambda-demo)                                           | JDK(>=)1.8 lambda相关 |
+| [spring-rabbitmq-template-demo](./spring-rabbitmq-template-demo)                     | rbbitmq整合相关         |
+| [spring-responsibility-chain-demo](./spring-responsibility-chain-demo)               | 责任链模式               |
+| [spring-sms-template-demo](./spring-sms-template-demo)                               | 消息推送相关              |
+| [spring-strategy-pattern-demo](./spring-strategy-pattern-demo)                       | 策略模式pom             |                                        |
+| [spring-template-method-pattern-demo](./spring-template-method-pattern-demo)         | 模板模式                |
+|                                                                                      |                     |
+ 
